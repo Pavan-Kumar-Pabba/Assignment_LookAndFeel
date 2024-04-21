@@ -1,9 +1,10 @@
 /* Add your CSS styles here */
 body {
-    background-image: url('images/background.jpg'); /* Replace 'background.jpg' with your image file */
+    /* Replace 'background.jpg' with your image file */
     background-size: cover; /* Cover the entire background */
     background-repeat: no-repeat; /* Do not repeat the background image */
     background-attachment: fixed; /* Fixed background */
+    background-color: rgb(156, 213, 219);
 }
 
 /* Sidebar toggle button */
@@ -160,7 +161,7 @@ body {
 .mission-statement {
     margin-top: 50px; /* Adjust margin-top as needed */
     padding: 20px;
-    background-color: #eed86b;
+    background-color: rgb(156, 213, 219);
     border-radius: 10px;
 }
 
