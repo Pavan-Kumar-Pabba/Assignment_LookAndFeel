@@ -1,0 +1,87 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    background-image: url('backrgound3.png'); /* Replace 'your-background-image.jpg' with the path to your image */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Ensure that body covers the entire viewport height */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff; /* Change text color to white for better visibility on the background */
+}
+
+table {
+    width: 80%; /* Adjust table width as needed */
+    max-width: 800px;
+    background-color: rgba(247, 247, 245, 0.922); /* Add background color with opacity for better readability of table */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px; /* Add margin top to separate table from the top of the viewport */
+    padding: 20px;
+    color: #000; /* Change text color to black for better readability */
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+button {
+    padding: 8px 16px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+    margin-left: 10px; /* Add margin top to separate button from the table */
+}
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+input[type="text"] {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    width: 200px;
+    margin-bottom: 10px; /* Add margin bottom to separate input from the table */
+}
+
+    input[type="text"]:focus {
+        outline: none;
+        border-color: #007bff;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    }
+
+.doctors h1 {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 36px;
+    color: #333;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds a shadow with offset X and Y of 2px, blur radius of 4px, and color with 50% opacity */
+}
+
+
+.logo-container {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+}
+
+    .logo-container img {
+        width: 200px; /* Adjust the width as needed */
+        height: auto;
+    }

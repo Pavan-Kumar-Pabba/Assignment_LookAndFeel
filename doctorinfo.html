@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctors Information</title>
+    <link rel="stylesheet" href="doctorstyle.css">
+</head>
+<body>
+    <div class="logo-container">
+        <img src="logo.jpeg" alt="Logo">
+    </div>
+    <div class="doctors">
+        <h1>Doctors Information</h1>
+    </div>
+    <input type="text" id="searchInput" placeholder="Search by name...">
+    <button onclick="searchDoctor()">Search</button>
+    <table id="doctorTable">
+        <thead>
+            <tr>
+                <th>Reg ID</th>
+                <th>Name</th>
+                <th>Sex</th>
+                <th>Degree</th>
+                <th>Specialization</th>
+                <th>Rating</th>
+            </tr>
+        </thead>
+        <tbody id="doctorData">
+            <!-- Table data will be dynamically populated here -->
+        </tbody>
+    </table>
+
+    <script src="doctorscript.js"></script>
+</body>
+</html>
