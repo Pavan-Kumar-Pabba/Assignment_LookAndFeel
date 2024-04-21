@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Information</title>
+    <link rel="icon" type="image/x-icon" href="images\logo.png">
+    <link rel="stylesheet" href="doctorstyle.css">
+</head>
+<body>
+    <div class="logo-container">
+        <a href="mediplus.html"> <img src="images/sidelogo.png" alt="Logo"> </a>
+    </div>
+    <div class="doctors">
+        <h1>Hospital Information</h1>
+    </div>
+    <input type="text" id="searchInput" placeholder="Search by name...">
+    <button onclick="searchDoctor()">Search</button>
+    <table id="doctorTable">
+        <thead>
+            <tr>
+                <th>Hospital ID</th>
+                <th>Name</th>
+                <th>Doctor Reg.Id</th>
+                <th>Address</th>
+                <th>City</th>
+                <th>State</th>
+                <th>ZIP</th>
+                <th>phone</th>
+                <th>email</th>
+            </tr>
+        </thead>
+        <tbody id="doctorData">
+            <!-- Table data will be dynamically populated here -->
+        </tbody>
+    </table>
+
+    <script src="hospitalscript.js"></script>
+</body>
+</html>
