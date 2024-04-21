@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Book an Appointment </title>
+  <link rel="icon" type="image/x-icon" href="images\logo.png">
+  <link rel="stylesheet" href="appointmentstyle.css">
+</head>
+<body>
+  <header class="header">
+    <img src="images\sidelogo.png" alt="Your Logo" class="logo">
+    <div class="scrolling-text">
+      <p>We are open from Monday to Friday from 7:00 AM to 10:00 PM . On Saturdays and Sundays, we are open from 9:00 AM to 5:00 PM</p>
+    </div>
+  </header>
+  <div class="container">
+    <div class="form-container">
+      <h2>Book Appointment</h2>
+      <form id="appointmentForm">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required><br><br>
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required><br><br>
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required><br><br>
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required><br><br>
+        <label for="City">City:</label>
+        <input type="text" id="City" name="City" required><br><br>
+        <label for="State">State:</label>
+        <input type="text" id="State" name="State" required><br><br>
+        <label for="ZIP">ZIP:</label>
+        <input type="text" id="ZIP" name="ZIP" required><br><br>
+        <label for="appointmentDate">Appointment Date:</label>
+        <input type="date" id="appointmentDate" name="appointmentDate" required><br><br>
+        <label for="Mobile">Mobile:</label>
+        <input type="text" id="Mobile" name="Mobile " required><br><br>
+        <label for="Email">Email:</label>
+        <input type="text" id="Email" name="Email" required><br><br>
+        <label for="illnessType">Service Required:</label>
+        <select id="illnessType" name="Service Required" required>
+          <option value="" disabled selected>Select</option>
+          <option value="Primary Care">Primary Care</option>
+          <option value="Emergency Care">Emergency Care</option>
+          <option value="Speciality Care">Speciality Care</option>
+          <option value="Diagnostic Service">Diagnostic Service </option>
+          <option value="Surgical Services">Surgical Services</option>
+          <option value="Rehabilitation Services">Rehabilitation Services</option>
+          <!-- Add more options as needed -->
+        </select><br><br>
+        <label for="Describe Illness">Describe Illness</label>
+        <input type="text" id="Describe Illness" name="Describe Illness" required><br><br>
+        <button type="submit">Book Appointment</button>
+      </form>
+    </div>
+    <div class="search-container">
+      <h2>Search</h2>
+      <label for="searchFirstName">Search by Last Name:</label>
+      <input type="text" id="searchFirstName" name="searchLastName">
+      <label for="Email">Email:</label>
+      <input type="text" id="Email" name="Email">
+      <button onclick="searchName()">Search</button>
+      <br><br>
+    </div>
+    <div class="table-container">
+      <h2>Appointment Data</h2>
+      <table id="appointmentTable">
+        <!-- Table data will be dynamically populated here -->
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Age</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Zip</th>
+            <th>Appointment Date</th>
+            <th>Mobile</th>
+            <th>Email</th>
+            <th>Services Required</th>
+            <th>Describe Illness</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="appointmentData">
+          <!-- Dummy data rows will be added here dynamically -->
+          <tr>
+            <td>Pavan</td>
+            <td>Pabba</td>
+            <td>24</td>
+            <td>14240 Knob Hill Place</td>
+            <td>Tampa</td>
+            <td>Florida</td>
+            <td>33613</td>
+            <td>04/20/2024</td>
+            <td>8136139999</td>
+            <td>pabba1@gmail.com</td>
+            <td>Primary Care</td>
+            <td>Fever</td>
+            <td><button onclick="deleteRow(this)">Delete</button></td>
+            <td><button onclick="editRow(this)">Edit</button></td>
+          </tr>
+          <!-- Add more dummy rows as needed -->
+          <tr>
+            <td>Gagan</td>
+            <td>Dalavai</td>
+            <td>24</td>
+            <td>14240 Knob Hill Place</td>
+            <td>Tampa</td>
+            <td>Florida</td>
+            <td>33613</td>
+            <td>04/20/2024</td>
+            <td>8889997777</td>
+            <td>gagan1@gmail.com</td>
+            <td>Primary Care</td>
+            <td>Cold</td>
+            <td><button onclick="deleteRow(this)">Delete</button></td>
+            <td><button onclick="redirectToEditPage()">Edit</button></td>
+<script>
+function redirectToEditPage() {
+    // Redirect to the specified file path
+    window.location.href = "bookappointment.html";
+}
+</script>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <script src="appointmentscript.js"></script>
+</body>
+</html>

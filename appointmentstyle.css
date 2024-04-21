@@ -1,0 +1,249 @@
+body {
+    background-image: url('images/background2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+/* Sidebar toggle button */
+#sidebarToggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 9999;
+}
+
+/* Sidebar active state */
+#sidebar.active {
+  left: -250px;
+}
+
+/* Adjustments for tablet and mobile views */
+@media screen and (max-width: 991px) {
+  #sidebar {
+    left: -250px;
+  }
+
+  #sidebar.active {
+    left: 0;
+  }
+}
+
+  /* Keyframes for the scrolling animation */
+/* Keyframes for the scrolling animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(500%); /* Change to cover the entire screen width */
+  }
+}
+
+/* Styles for the scrolling text */
+.scrolling-text {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%; /* Set the width to 100% to cover the entire screen */
+}
+
+.scrolling-text p {
+  display: inline-block;
+  animation: scroll 40s linear infinite; /* Adjust duration as needed */
+}
+
+  
+  .container {
+    display: flex;
+    justify-content: center; /* Center align items horizontally */
+    align-items: flex-start; /* Align items to the top */
+    flex-direction: column;
+  }
+  
+  .form-container, .table-container {
+    width: 100%;
+    background-color: rgba(247, 222, 129, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(101, 145, 249, 0.2);
+    margin-right: 20px; /* Add space between containers */
+  }
+  
+  .form-container {
+    width: 70%;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-left: 150px;
+    margin-right: 20px;
+    background: linear-gradient(to bottom, rgba(114, 134, 245, 0.9), rgba(255, 255, 255, 0.9)); /* Apply gradient overlay */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(101, 145, 249, 0.2);
+}
+  /* Add these styles to position the logo */
+  .logo {
+    max-width: 200px; /* Adjust the maximum width as needed */
+    max-height: 200px; /* Adjust the maximum height as needed */
+   
+  }
+
+  /* Add these styles after the existing styles */
+
+form input[type="text"],
+form input[type="number"],
+form input[type="date"],
+form select {
+  width: calc(100% - 20px); /* Make all input fields 100% width with 10px padding on each side */
+  margin: 5px; /* Add margin for spacing */
+  padding: 5px; /* Add padding for spacing inside the input fields */
+}
+
+  
+  .table-container {
+    width: 100%; /* Set width for table container */
+    margin-top: 20px;
+  }
+  
+  /* Rest of your CSS styles */
+  
+  
+  h1 {
+    text-align: center;
+  }
+
+  h2{
+    text-align: center;
+  }
+  
+  /* Add these styles at the end of your existing styles */
+  
+  form {
+    background: none; /* Remove background color */
+    padding: 20px; /* Add padding */
+    border-radius: 10px; /* Add border-radius */
+    box-shadow: 0 0 20px rgba(101, 145, 249, 0.2); /* Add box-shadow */
+}
+
+  
+  .appointmentTable {
+    width: 100%;
+    overflow-x: auto;
+    max-height: 300px; /* Set a maximum height */
+    padding: 10px; /* Add padding to create space */
+    border-radius: 10px; /* Add border-radius */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box-shadow */
+  }
+  
+  /* Remove fixed height and set to auto */
+  .appointmentTable table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+    height: auto;
+  }
+  
+  
+  form label {
+    font-weight: bold;
+  }
+  
+  form input, form select {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  form button:hover {
+    background-color: #45a049;
+  }
+  
+  .appointmentTable {
+    overflow-x: auto;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  tr:hover {
+    background-color: #f5f5f5;
+  }
+  td {
+    word-wrap: break-word;
+  }
+  
+  
+ 
+  
+  button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: #da190b;
+  }
+  
+  /* Remove default highlighting */
+  tr:focus-within {
+    outline: none;
+  }
+  
+
+  /* Add these styles to your existing CSS file */
+
+.search-container {
+  width: 30%;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: rgba(175, 230, 239, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(129, 104, 245, 0.2);
+}
+
+.search-container h2 {
+  text-align: center;
+}
+
+.search-container label {
+  display: block;
+  font-weight: bold;
+}
+
+.search-container input[type="text"],
+.search-container input[type="date"] {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.search-container input[type="text"]:focus,
+.search-container input[type="date"]:focus {
+  outline: none;
+  border-color: #4CAF50;
+}

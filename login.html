@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Mediplus Login </title>
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+    <link rel="stylesheet" href="loginstyle.css">
+</head>
+
+<body>
+    <img class="logo1" src="images/sidelogo.png" alt="">
+    <div class="contact-container">
+        <div class="right">
+            <h1 class="title">Sign Into Account</h1>
+            <img class="logo" src="images/logo.png" alt="">
+            <div class="form-container">
+                <div class="username">
+                    <img class="icon email-icon" src="images/email.png" alt="">
+                    <input type="email" class="user-input" placeholder="E-Mail">
+                </div>
+                <div class="password">
+                    <img class="icon password-icon" src="images/password.png" alt="">
+                    <input type="password" class="pass-input" placeholder="Password">
+                </div>
+                <div class="keepme">
+                    <input type="checkbox" checked="true">
+                    Keep Me Logged In
+                </div>
+                <button type="button" onclick="redirectToPage()">Go!</button>
+<script>
+    function redirectToPage() {
+        window.location.href = "index.html";
+    }
+</script>
+
+                <a href="#" class="link">Forgot Password</a>
+                <div>
+                    <span>Don't have an account yet?</span>
+                    <a href="signup.html" >Signup</a>
+                </div>                
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

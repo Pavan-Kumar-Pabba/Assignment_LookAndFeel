@@ -1,0 +1,162 @@
+/* Add your CSS styles here */
+body {
+    background-image: url('images/background.jpg'); /* Replace 'background.jpg' with your image file */
+    background-size: cover; /* Cover the entire background */
+    background-repeat: no-repeat; /* Do not repeat the background image */
+    background-attachment: fixed; /* Fixed background */
+  }
+  
+/* Sidebar toggle button */
+#sidebarToggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 9999;
+}
+
+/* Sidebar active state */
+#sidebar.active {
+  left: -250px;
+}
+
+/* Adjustments for tablet and mobile views */
+@media screen and (max-width: 991px) {
+  #sidebar {
+    left: -250px;
+  }
+
+  #sidebar.active {
+    left: 0;
+  }
+}
+
+  
+  .heading {
+    text-align: center;
+    color: #000; /* White text color */
+    margin-top: 20px;
+    font-size: 36px; /* Larger font size */
+    text-transform: uppercase; /* Convert text to uppercase */
+    letter-spacing: 2px; /* Increase letter spacing */
+    font-family: Arial, sans-serif; /* Specify font family */
+  }
+  
+  .healthcare-content {
+    padding: 20px;
+    margin: 20px auto; /* Center the content */
+    max-width: 800px; /* Limit content width */
+  }
+  
+  .healthcare-content p {
+    font-size: 18px; /* Increased font size */
+    line-height: 1.5; /* Set line height */
+    color: #000; /* Black text color */
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  
+
+  .flip-card {
+    background-color: transparent;
+    width: 300px; /* Reduced width */
+    height: 300px; /* Reduced height */
+    perspective: 1000px;
+    margin-bottom: 20px; /* Add margin to the bottom */
+  }
+  
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .flip-card-inner img {
+    width: 100%; /* Adjust the width of the image */
+    height: 100%; /* Adjust the height of the image */
+  }
+  
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+    background-color: #bbb;
+  }
+  
+  .flip-card-back {
+    background-color: #f4f4f4;
+    color: black;
+    transform: rotateY(180deg);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .data-model {
+    margin-top: 100px; /* Adjust margin-top to move further down */
+    text-align: center; /* Center the content */
+    color: #000; /* Black text color */
+    font-size: 24px; /* Increased font size */
+  }
+  
+
+  /* Styles for the about us section */
+/* Styles for the about us section */
+/* Styles for the about us section */
+.about-us {
+    background-color: rgba(162, 255, 0, 0); /* Background color */
+    padding: 10px; /* Reduced padding */
+    border-radius: 8px; /* Smaller border radius */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); /* Box shadow */
+    margin-bottom: 15px; /* Reduced margin bottom */
+    max-width: 600px; /* Reduced maximum width */
+    margin: 0 auto; /* Center the box horizontally */
+    border-color: black;
+  }
+  
+  .about-us h1 {
+    color: #333; /* Darker color for the heading */
+    font-size: 30px; /* Reduced font size */
+    text-align: center;
+  }
+  
+  .about-us p {
+    color: #333; /* Darker color for the paragraph */
+    font-size: 14px; /* Reduced font size */
+    line-height: 1.3;
+  }
+  
+  /* Animation for the about us content */
+  .about-us-content {
+    animation-name: fade-in;
+    animation-duration: 1s;
+  }
+  
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  
