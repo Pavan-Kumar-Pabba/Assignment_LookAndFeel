@@ -32,7 +32,6 @@ function displayDoctors(data) {
         tableBody.appendChild(row);
     });
 }
-
 function searchDoctor() {
     const searchInput = document.getElementById("searchInput").value.toLowerCase();
     const filteredDoctors = sampleData.filter(doctor =>
