@@ -1,7 +1,6 @@
 // Add event listener to the form submission
 document.getElementById("appointmentForm").addEventListener("submit", function(event) {
   event.preventDefault(); // Prevent form submission
-
   // Get form values
   const firstName = document.getElementById("firstName").value;
   const lastName = document.getElementById("lastName").value;
