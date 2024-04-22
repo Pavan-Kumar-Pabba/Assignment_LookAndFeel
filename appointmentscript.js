@@ -44,6 +44,16 @@ document.getElementById("appointmentForm").addEventListener("submit", function(e
   document.getElementById("appointmentForm").reset();
 });
 
+function toggleMenu() {
+  var menu = document.getElementById("menuItems");
+  if (menu.style.display === "none" || menu.style.display === "") {
+    menu.style.display = "block";
+  } else {
+    menu.style.display = "none";
+  }
+}
+
+
 // Function to delete a row
 function deleteRow(btn) {
   const row = btn.parentNode.parentNode;

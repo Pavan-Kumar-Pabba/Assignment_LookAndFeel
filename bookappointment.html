@@ -9,7 +9,24 @@
 </head>
 <body>
   <header class="header">
-    <img src="images\sidelogo.png" alt="Your Logo" class="logo">
+    <div class="menu-container" onclick="toggleMenu()">
+      <div class="menu-icon">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    
+    <!-- Hidden menu -->
+    <div id="menuItems" class="hidden-menu">
+      <ul>
+        <li><a href="mediplus.html">Home</a></li>
+        <li><a href="datachart.html">Patient Statistics</a></li>
+        <li><a href="doctorinfo.html">Find a Doctor</a></li>
+      </ul>
+    </div>
+
+    <a href="mediplus.html"> <img src="images\sidelogo.png" alt=" " height="120px" width="250px"> </a>
     <div class="scrolling-text">
       <p>We are open from Monday to Friday from 7:00 AM to 10:00 PM . On Saturdays and Sundays, we are open from 9:00 AM to 5:00 PM</p>
     </div>

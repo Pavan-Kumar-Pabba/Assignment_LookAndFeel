@@ -1,7 +1,7 @@
 ﻿body {
     margin: 0;
     padding: 0;
-    background-image: url('backrgound3.png'); /* Replace 'your-background-image.jpg' with the path to your image */
+    background-image: url('images/backrgound3.png'); /* Replace 'your-background-image.jpg' with the path to your image */
     background-size: cover;
     background-position: center;
     display: flex;

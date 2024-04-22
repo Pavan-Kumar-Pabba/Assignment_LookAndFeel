@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mediplus Customer Healthcare Visualization</title>
+  <link rel="icon" type="image/x-icon" href="images\logo.png">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom right, #6d8cf2, #ffffff); /* Adjust colors and direction as needed */
+  margin: 0;
+  padding: 0;
+}
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      background-color: #c2f7bf;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .chart-container {
+      margin-bottom: 20px;
+    }
+    h1, h2 {
+      color: #333;
+      text-align: center;
+      font-size: 24px;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+      color: #555;
+    }
+    .about-us {
+   
+   padding: 10px; /* Reduced padding */
+   border-radius: 8px; /* Smaller border radius */
+   margin-bottom: 15px; /* Reduced margin bottom */
+   max-width: 600px; /* Reduced maximum width */
+   margin: 0 auto; /* Center the box horizontally */
+   border-color: black;
+ }
+ 
+ .about-us h1 {
+   font-family: 'Arial Black', sans-serif;
+   font-size: 36px;
+   color: #333;
+   text-align: center;
+   letter-spacing: 2px;
+   margin-bottom: 20px;
+   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds a shadow with offset X and Y of 2px, blur radius of 4px, and color with 50% opacity */
+}
+  </style>
+</head>
+<body>
+  <a href="mediplus.html"><img src="images/sidelogo.png" alt="" height="120px" width="250px" align="left"></a>
+  <div class="about-us">
+    <h1 class="heading">Patient Statistics</h1>
+    </div>
+  <header class="header">
+  <div class="container">
+    <h1>Patient details by type of service (In %)</h1>
+    <div class="chart-container">
+      <canvas id="serviceChart"></canvas>
+    </div>
+    <p>Insight: The pie chart illustrates the distribution of patients across different types of services. Primary Care emerges as the most sought-after service, capturing a significant portion of the patient count at 26.3%. This indicates a high demand for primary healthcare services within the patient population.</p>
+  </div>
+
+  <div class="container">
+    <h2>Patient details by Age group (In %)</h2>
+    <div class="chart-container">
+      <canvas id="ageChart"></canvas>
+    </div>
+    <p>Insight: The bar chart depicts the age distribution of patients, revealing interesting patterns. While patients aged 66 and above constitute the largest age group with 20.8%, there is also a substantial representation from the 3-10 age group at 17.4%. This suggests a need for healthcare services tailored to both the elderly population and pediatric patients.</p>
+  </div>
+
+  <script>
+    // Data for service chart
+    var serviceData = {
+      labels: ["Primary Care", "Speciality Care", "Emergency Care", "Diagnostic Services", "Surgical Services", "Rehabilitation Services"],
+      datasets: [{
+        data: [26.3, 11.67, 20.89, 14.2, 18.93, 8.08],
+        backgroundColor: ["#2c3e50", "#2980b9", "#c0392b", "#27ae60", "#f39c12", "#8e44ad"],
+        borderWidth: 1
+      }]
+    };
+
+    // Data for age chart
+    var ageData = {
+      labels: ["Age 0-3", "Age 3-10", "Age 10-18", "Age 18-25", "Age 25-40", "Age 40-65", "Age 66+"],
+      datasets: [{
+        data: [14.3, 17.4, 8.8, 12.3, 11.2, 15.2, 20.8],
+        backgroundColor: ["#2c3e50", "#2980b9", "#c0392b", "#27ae60", "#f39c12", "#8e44ad", "#16a085"],
+        borderWidth: 1
+      }]
+    };
+
+    // Service chart
+    var serviceCtx = document.getElementById('serviceChart').getContext('2d');
+    var serviceChart = new Chart(serviceCtx, {
+      type: 'pie',
+      data: serviceData,
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        legend: {
+          display: true,
+          position: 'bottom',
+          labels: {
+            fontColor: '#333'
+          }
+        }
+      }
+    });
+
+    // Age chart
+    var ageCtx = document.getElementById('ageChart').getContext('2d');
+    var ageChart = new Chart(ageCtx, {
+      type: 'bar',
+      data: ageData,
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        legend: {
+          display: false
+        },
+        scales: {
+          xAxes: [{
+            ticks: {
+              fontColor: '#333'
+            }
+          }],
+          yAxes: [{
+            ticks: {
+              fontColor: '#333'
+            }
+          }]
+        }
+      }
+    });
+  </script>
+</body>
+</html>
